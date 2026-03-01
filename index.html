@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Python Learning Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo">PyLearn</div>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="learn.html">Learn</a>
+                <a href="quiz.html">Quiz</a>
+                <a href="test.html">Test</a>
+                <a href="#" id="logoutBtn" style="display: none;">Logout</a>
+            </div>
+            <div class="user-info" id="userInfo"></div>
+        </nav>
+
+        <main class="main-content">
+            <section class="hero">
+                <h1>Learn Python Programming</h1>
+                <p>Master Python with 100+ questions, 20 quizzes, and certification</p>
+                <div class="cta-buttons">
+                    <button onclick="location.href='learn.html'" class="btn primary">Start Learning</button>
+                    <button onclick="showLoginModal()" class="btn secondary" id="loginBtn">Login / Register</button>
+                </div>
+            </section>
+
+            <section class="features">
+                <div class="feature-card">
+                    <h3>100+ Questions</h3>
+                    <p>Practice with over 100 Python questions ranging from basics to advanced</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Built-in IDE</h3>
+                    <p>Write and run Python code directly in your browser</p>
+                </div>
+                <div class="feature-card">
+                    <h3>20 Quizzes</h3>
+                    <p>Test your knowledge with interactive quizzes</p>
+                </div>
+                <div class="feature-card">
+                    <h3>5 Final Tests</h3>
+                    <p>Complete all tests to earn your certification</p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>Made by JohnnyCode</p>
+        </footer>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="hideLoginModal()">&times;</span>
+            <h2>Login / Register</h2>
+            <form id="loginForm">
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit" class="btn primary">Login</button>
+                <button type="button" class="btn secondary" onclick="register()">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

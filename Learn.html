@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Python - PyLearn</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/ide.css">
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.24.1/full/pyodide.js"></script>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo">PyLearn</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="learn.html" class="active">Learn</a>
+                <a href="quiz.html">Quiz</a>
+                <a href="test.html">Test</a>
+                <a href="#" id="logoutBtn">Logout</a>
+            </div>
+            <div class="user-info" id="userInfo"></div>
+        </nav>
+
+        <main class="main-content">
+            <div class="learn-container">
+                <div class="sidebar">
+                    <h3>Python Questions (100)</h3>
+                    <div class="question-categories">
+                        <button class="category-btn active" onclick="filterQuestions('all')">All</button>
+                        <button class="category-btn" onclick="filterQuestions('beginner')">Beginner</button>
+                        <button class="category-btn" onclick="filterQuestions('intermediate')">Intermediate</button>
+                        <button class="category-btn" onclick="filterQuestions('advanced')">Advanced</button>
+                    </div>
+                    <div class="questions-list" id="questionsList">
+                        <!-- Questions will be loaded here -->
+                    </div>
+                </div>
+                
+                <div class="content-area">
+                    <div class="question-display" id="questionDisplay">
+                        <h2 id="questionTitle">Select a question</h2>
+                        <p id="questionDescription">Choose a question from the list to start learning</p>
+                        <div id="questionExample"></div>
+                    </div>
+                    
+                    <div class="ide-container">
+                        <div class="ide-header">
+                            <h3>Python IDE</h3>
+                            <button onclick="runCode()" class="btn primary">Run Code</button>
+                            <button onclick="checkAnswer()" class="btn secondary">Check Answer</button>
+                        </div>
+                        <textarea id="codeEditor" placeholder="Write your Python code here...">print("Hello, World!")</textarea>
+                        <div class="output-container">
+                            <h4>Output:</h4>
+                            <pre id="output"></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>Made by JohnnyCode</p>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/questions.js"></script>
+    <script src="js/ide.js"></script>
+</body>
+</html>

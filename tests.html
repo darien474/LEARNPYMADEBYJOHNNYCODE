@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Tests - PyLearn</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo">PyLearn</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="learn.html">Learn</a>
+                <a href="quiz.html">Quiz</a>
+                <a href="test.html" class="active">Test</a>
+                <a href="#" id="logoutBtn">Logout</a>
+            </div>
+            <div class="user-info" id="userInfo"></div>
+        </nav>
+
+        <main class="main-content">
+            <h1>Final Tests</h1>
+            <p>Complete all 5 tests to earn your certification</p>
+            
+            <div class="progress-bar">
+                <div class="progress" id="testProgress"></div>
+            </div>
+            
+            <div class="tests-container" id="testsContainer">
+                <!-- Tests will be loaded here -->
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>Made by JohnnyCode</p>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/test.js"></script>
+</body>
+</html>
