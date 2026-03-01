@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    background: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #667eea;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    background: #667eea;
+    color: white;
+}
+
+.main-content {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.hero {
+    text-align: center;
+    color: white;
+    padding: 4rem 2rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.btn {
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn.primary {
+    background: white;
+    color: #667eea;
+}
+
+.btn.secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.btn.secondary:hover {
+    background: white;
+    color: #667eea;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card h3 {
+    color: #667eea;
+    margin-bottom: 1rem;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 90%;
+}
+
+.close {
+    float: right;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#loginForm input {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.footer {
+    background: white;
+    text-align: center;
+    padding: 1rem;
+    color: #666;
+}
+
+/* Learn page styles */
+.learn-container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    min-height: 600px;
+}
+
+.sidebar {
+    background: #f5f5f5;
+    padding: 1rem;
+    border-right: 1px solid #ddd;
+}
+
+.question-categories {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.category-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #e0e0e0;
+}
+
+.category-btn.active {
+    background: #667eea;
+    color: white;
+}
+
+.questions-list {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.question-item {
+    padding: 1rem;
+    margin: 0.5rem 0;
+    background: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.question-item:hover {
+    background: #e0e0e0;
+}
+
+.question-item.active {
+    background: #667eea;
+    color: white;
+}
+
+/* Quiz grid styles */
+.quiz-grid, .tests-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 2rem 0;
+}
+
+.quiz-card, .test-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.quiz-card:hover, .test-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.quiz-card.completed, .test-card.completed {
+    background: #4caf50;
+    color: white;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background: #e0e0e0;
+    border-radius: 5px;
+    margin: 1rem 0;
+}
+
+.progress {
+    height: 100%;
+    background: #4caf50;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+}
