@@ -1,0 +1,20 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "title": "Hello World",
+      "category": "beginner",
+      "description": "Write a program that prints 'Hello, World!' to the console.",
+      "example": "print('Hello, World!')",
+      "solution": "print('Hello, World!')"
+    },
+    {
+      "id": 2,
+      "title": "Variables",
+      "category": "beginner",
+      "description": "Create a variable 'name' with your name and print it.",
+      "example": "name = 'John'\nprint(name)",
+      "solution": "name = 'John'\nprint(name)"
+    }
+  ]
+}
