@@ -1,0 +1,15 @@
+{
+  "quizzes": [
+    {
+      "id": 1,
+      "title": "Quiz 1",
+      "questions": [
+        {
+          "question": "What is the output of print(2**3)?",
+          "options": ["6", "8", "9", "5"],
+          "correct": 1
+        }
+      ]
+    }
+  ]
+}
